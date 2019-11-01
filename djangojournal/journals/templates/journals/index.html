@@ -6,22 +6,24 @@
 {% block content %}
 {% if journal_list %}
 	<head>
-		<title>Django Journals</title>
+		<title>My Online Journal</title>
 	</head>
 	<body>
 		<section class="hero">
 			<div class="hero-inner">
-				<img class="book" src="{% static 'journals/images/book.jpg' %}" alt="Picture of a book" style="width:100%;" />
-				<div class="centered">
-					<h1 style="color:white;" class="outline">My Online Journal</h1>
-					<h2 style="color:white;" class="outline">Personal writing without the paper<h2>
+				<div class="container" style="width: 970px">
+					<img class="book" src="{% static 'journals/images/book.jpg' %}" alt="Picture of a book" style="width:100%;" />
+					<div class="centered">
+						<h1 style="color:white;" class="outline">My Online Journal</h1>
+						<h2 style="color:white;" class="outline">Personal writing without the paper<h2>
+					</div>
 				</div>
 			</div>
 		</section>
 	</body>
 	
 	<div>
-		<a class="button button-primary" href="#">New Journal Entry</a>
+		<a class="button button-primary" href="{% url 'journals:new_journal' %}">New Journal Entry</a>
 	</div>
 	
 	<table class="table">

@@ -1,0 +1,12 @@
+{% extends 'journals/base.html' %}
+
+{% block title %}Start a New Topic{% endblock %}
+
+{% block content %}
+	<a href="{% url 'journals:index' %}"><h1>My Online Journal</h1></a>
+	<form method="POST" novalidate>
+		{% csrf_token %}
+		{% include 'journals/form.html' %}
+		<button type="submit" class="btn btn-success">Post</button>
+	</form>
+{% endblock %}
