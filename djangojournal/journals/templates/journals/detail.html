@@ -1,0 +1,9 @@
+{% extends 'journals/base.html' %}
+
+{% block title %}Journal: {{journal.title}}{% endblock %}
+
+{% block content %}
+	<a href="{% url 'journals:index' %}"><h1>My Online Journal</h1></a>
+	<a>{{journal.created_at}}</a>
+	<p>{{journal.journal_entry}}</p>
+{% endblock %}
